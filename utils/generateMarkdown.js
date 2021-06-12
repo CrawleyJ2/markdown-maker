@@ -1,4 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+
+const fs = require("fs");
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 
@@ -13,8 +16,23 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  
 
 `;
 }
+const writeToFile = readmeContent => {
+  return new Promise((resolve, reject) => {
+    fs.writeToFile('./dist/readme.md', readmeContent, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve ({
+        ok: true,
+        message: 'README created!'
+      });
+    });
+  });
+};
 
 module.exports = generateMarkdown;
