@@ -4,7 +4,7 @@
 
   ## Description
 
-  This project allows you to create a professional README file from the command line. The application will walk through the information need and generate a completed file formatted and ready for use.
+  This project allows you to create a professional README file from the command line. The application will walk you through collecting the information needed and generate a completed file formatted and ready for use.
 
   ## Prompt
   ![](assets/images/PromptShot.png)
